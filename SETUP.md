@@ -7,7 +7,7 @@ Each step gives you a value to paste into Railway > your service > Variables. Ne
    - OAuth & Permissions > Bot User OAuth Token (starts `xoxb-`) > `SLACK_BOT_TOKEN`
    - Basic Information > App-Level Tokens > Generate with scope `connections:write` (starts `xapp-`) > `SLACK_APP_TOKEN`
    - Your Slack profile > ... > Copy member ID (starts `U`) > `OWNER_SLACK_USER_ID`
-   - Create channels `#agent-inbound` and `#agent-chief-of-staff` and run `/invite @Origin Agents` in each.
+   - The private channels `#agent-inbound` and `#agent-chief-of-staff` already exist. Run `/invite @Origin Agents` in each.
 3. **Notion integration.** notion.so/profile/integrations > New internal integration, workspace Origin Films. Copy the secret > `NOTION_TOKEN`. Then open the page "Origin OS (new structure, in build)" > ... > Connections > add the integration. Share only that page, so the agents cannot see the old databases or Weddings.IO.
 4. **Typeform webhook.** Form > Connect > Webhooks > add `https://<your-railway-domain>/webhooks/typeform`, set a secret (any long random text) > `TYPEFORM_WEBHOOK_SECRET`.
 5. **Gmail for booking@originfilms.ca.** In Google Cloud Console create a project, enable the Gmail API, set the OAuth consent screen to **Internal**, and create an OAuth client (Desktop). `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, and a refresh token obtained while signed in as booking@ > `GMAIL_REFRESH_TOKEN`. This step is the fiddliest; ask for a walkthrough when you get here.
